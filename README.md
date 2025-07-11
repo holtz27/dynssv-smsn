@@ -1,11 +1,1 @@
-Financial time series often exhibit skewness and heavy tails, making
-it essential to use models that incorporate these characteristics to ensure greater reliability in the results. Furthermore, allowing temporal
-variation in the skewness parameter can bring significant gains in the
-analysis of this type of series. However, for more robustness, it is crucial to develop models that balance flexibility and parsimony. In this
-paper, we propose dynamic skewness-stochastic volatility models in
-the SMSN family (DynSSV-SMSN), using priors that penalize model
-complexity. Parameter estimation was carried out using the Hamiltonian Monte Carlo (HMC) method via the RStan package. Simulation
-results demonstrated that penalizing priors present superior performance in several scenarios compared to the classical choices. In the
-empirical application to Bitcoin returns, models with heavy tails and
-dynamic skewness provided a better fit to the data according to the
-DIC, WAIC, and LOO-CV information criteria.
+Financial time series often exhibit skewness and heavy tails, making it essential to use models that incorporate these characteristics to ensure greater reliability in the results. Furthermore, allowing temporal variation in the skewness parameter can bring significant gains in the analysis of this type of series. However, for more robustness, it is crucial to develop models that balance flexibility and parsimony. In this paper, we propose dynamic skewness-stochastic volatility models in the SMSN family (DynSSV-SMSN), using priors that penalize model complexity. Parameter estimation was carried out using the Hamiltonian Monte Carlo (HMC) method via the RStan package. Simulation results demonstrated that penalizing priors present superior performance in several scenarios compared to the classical choices. In the empirical application to Bitcoin returns, models with heavy tails and dynamic skewness provided a better fit to the data according to the DIC, WAIC, and LOO-CV information criteria.
