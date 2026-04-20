@@ -1,4 +1,4 @@
-# Obtenha os dados do ethereum
+# ethereum dataset
 ethereum = quantmod::getSymbols('ETH-USD', 
                                src='yahoo', 
                                from='2017-07-01', to='2022-12-06',
