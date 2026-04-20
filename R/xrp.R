@@ -1,9 +1,8 @@
 # Obtenha os dados do xrp
 xrp = quantmod::getSymbols('XRP-USD', 
-                            src='yahoo', 
+                           src='yahoo', 
                            from='2017-07-01', to='2022-12-06',
-                                #from='2017-01-07', to='2022-10-12',
-                            auto.assign=FALSE)
+                           auto.assign=FALSE)
 xrp = na.omit(xrp)
 xrp = data.frame(xrp)
 dates = as.Date(row.names(xrp), '%Y-%m-%d')
@@ -12,8 +11,6 @@ xrp = xrp[,'XRP.USD.Adjusted']
 T = length(xrp)
 log.ret = 100*(log( xrp[2:T])-log(xrp[1:(T-1)]))
 T = length(log.ret)
-#log.ret=log.ret-mean(log.ret)
-ytrain=log.ret-mean(log.ret)
 
 # Plots
 library(ggplot2)
@@ -39,23 +36,3 @@ data_summary = matrix(c( T, mean(log.ret),
                          moments::kurtosis(log.ret)), nrow=1)
 colnames(data_summary)=c('T', 'mean', 'sd', 'min', 'max', 'skewness', 'kurtosis')
 round(data_summary, digits=3)
-
-# Test
-# Obtenha os dados do xrp
-xrp = quantmod::getSymbols('XRP-USD', 
-                                src='yahoo', 
-                                #from='2017-01-07', to='2022-06-12',
-                                from='2022-06-12', to='2022-10-12',
-                                auto.assign=FALSE)
-xrp = na.omit(xrp)
-xrp = data.frame(xrp)
-dates = as.Date(row.names(xrp), '%Y-%m-%d')
-xrp = xrp[,'XRP.USD.Adjusted']
-#View(xrp)
-T = length(xrp)
-log.ret = 100*(log( xrp[2:T])-log(xrp[1:(T-1)]))
-T = length(log.ret)
-#log.ret=log.ret-mean(log.ret)
-ytest=log.ret
-
-y=c(ytrain, ytest)
