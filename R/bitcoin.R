@@ -1,7 +1,7 @@
 # Obtenha os dados do bitcoin
 bitcoin = quantmod::getSymbols('BTC-USD', 
                                src = 'yahoo', 
-                               from = '2017-01-07', to = '2022-06-12',
+                               from = '2017-01-07', to = '2022-12-06',
                                auto.assign = FALSE)
 bitcoin = na.omit(bitcoin)
 bitcoin = data.frame(bitcoin)
