@@ -36,7 +36,7 @@ pdf('dyn.pdf',width=20, height=10)
 trace_plots(theta, names=names)
 dev.off()
 
-# Info Criterios
+# information criteria
 info.crit=c(dic=dic(data=log.ret, mu_t=x$mu_t, sigma_t=x$sigma_t),
             waic=waic(data=log.ret, mu_t=x$mu_t, sigma_t=x$sigma_t)$estimates['waic',1],
             loo=loo(data=log.ret, mu_t=x$mu_t, sigma_t=x$sigma_t)$estimates['looic',1])
